@@ -1,38 +1,297 @@
-.App {
-  text-align: center;
+body{
+  margin:0;
+  color:black;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.text-green{
+  color:#087776;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.text-green2{
+  color:#147472;
+}
+
+.text-small{
+  font-size: 0.9rem;
+}
+
+
+.title-section::before{
+  content: '';
+  background-color: #17817f;
+  height:5px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transform: translateY(63px);
+}
+/********************** NAVBAR ********************************************/
+
+#nav-bar{
+
+  z-index: 10;
+  position: sticky;
+  top:0;
+  
+}
+
+.Navbar{
+  background-image:linear-gradient(to right, #17817f, #02504d);
+}
+
+
+/********************** HEADER ********************************************/
+#header-wrapper{
+  background-image:linear-gradient(to right, #17817f, #02504d);
+  position: relative;
+  color: #fff;
+  padding-top: 5%;
+  
+}
+
+.header-title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 100px;
+}
+
+
+.button-volunteer{
+  border-radius: 40px;
+  background-color: #fcf0d6;
+  color:#015441;
+  border: none;
+  box-shadow: 0px 4px 20px 3px rgba(68, 234, 220, 0.42);
+}
+
+.button-donate{
+  border-radius: 40px;
+  background-color: #02B699;
+  color:#F8FDF4;
+  border: none;
+  box-shadow: 0px 4px 20px 3px rgba(75, 225, 212, 0.42);
+}
+
+/*-----------Animation Leaf--------------*/
+.main-area{
+  width: 100%;
+  height: 6vh;
+  z-index:0 ;
+}
+
+.circles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes animate{
+  0%{
+    transform: translateY(0) rotate(0deg);
+  }
+  100%{
+    transform: translateY(-1000px) rotate(720deg);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.circles div{
+  position: absolute;
+  display: block;
+  bottom: -90px;
+  animation: animate 25s linear infinite;
+}
+
+.circles img{
+  opacity: 0.7;
+}
+
+.circles div:nth-child(1){
+  left: 25%;
+  animation-delay: 0s;
+
+}
+
+.circles div:nth-child(2){
+  left: 10%;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles div:nth-child(3){
+  left: 70%;
+  animation-delay: 4s;
+}
+
+.circles div:nth-child(4){
+  left: 40%;
+  animation-delay: 0s;
+  animation-duration: 10s;
+}
+
+.circles div:nth-child(5){
+  left: 65%;
+  animation-delay: 0s;
+}
+
+.circles div:nth-child(6){
+  left: 75%;
+  animation-delay: 3s;
+
+}
+
+.circles div:nth-child(7){
+  left: 35%;
+  animation-delay: 7s;
+
+}
+
+.circles div:nth-child(8){
+  left: 50%;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+.circles div:nth-child(9){
+  left: 20%;
+  animation-delay: 2s;
+  animation-duration: 10s;
+}
+
+.circles div:nth-child(10){
+  left: 85%;
+  animation-delay: 0s;
+  animation-duration: 15s;
+
+}
+
+/*---------------wave----------*/
+.custom-shape-divider-bottom-1655289917 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1655289917 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 101px;
+}
+
+.custom-shape-divider-bottom-1655289917 .shape-fill {
+  fill: #FFFFFF;
+}
+
+/********************** HOW ********************************************/
+
+.how-wrapper{
+  padding: 50px 0;
+}
+
+.center-div{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+
+.icon-circle{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #fcf0d6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/********************** WHY ********************************************/
+.why-wrapper{
+  padding: 50px 0;
+
 }
+
+
+
+
+/********************** WHAT ********************************************/
+
+#what-wrapper{
+  padding: 50px 0;
+
+}
+
+
+
+/********************** DROP POINTS ****************************************/
+#dp-wrapper{
+  padding: 80px 0;
+}
+
+/********************** OUR PARTNERS ****************************************/
+
+
+/********************** CONTACT US ****************************************/
+.contact-wrapper{
+  padding: 80px 0;
+}
+
+/********************** Footer ****************************************/
+#footer-wrapper{
+  background-image:linear-gradient(to right, #17817f, #02504d);
+  position: relative;
+  color: #fff;
+  padding-top: 5%;
+  
+}
+
+.custom-shape-divider-top-1655298418 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1655298418 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 79px;
+}
+
+.custom-shape-divider-top-1655298418 .shape-fill {
+  fill: #FFFFFF;
+}
+
+
+/********************** ABOUT US ********************************************/
+.about-wrapper{
+  background: #EDF0F3;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
