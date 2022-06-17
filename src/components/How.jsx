@@ -15,7 +15,7 @@ const How = () => {
         <Row className='text-center text-green py-4'>
             <Col md={4} className='center-div'>
                 
-                    <div className="icon-circle"> <FaWpforms color='#087776' size='50px'/></div>  
+                    <div className="icon-circle"> <FaWpforms color='#17817f' size='50px'/></div>  
                     <h5 className='pt-3'>Step 1</h5>
                    <p>Fill the "donation form" here</p> 
                 
@@ -24,7 +24,7 @@ const How = () => {
 
             <Col md={4} className='center-div'>
                
-                 <div className="icon-circle"> <FiSend color='#087776' size='50px'/></div>  
+                 <div className="icon-circle"> <FiSend color='#17817f' size='50px'/></div>  
                     <h5 className='pt-3'>Step 2</h5>
                   <p>Send the shoes here</p> 
                
@@ -33,7 +33,7 @@ const How = () => {
 
             <Col md={4} className='center-div'>
                 
-               <div className="icon-circle"><MdDoneOutline color='#087776' size='50px'/></div> 
+               <div className="icon-circle"><MdDoneOutline color='#17817f' size='50px'/></div> 
                     <h5 className='pt-3'>Step 3</h5>
                    <p>Done! Thank you for your contribution</p> 
               

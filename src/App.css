@@ -6,11 +6,11 @@ body{
 
 
 .text-green{
-  color:#087776;
+  color:#075f5d;
 }
 
 .text-green2{
-  color:#147472;
+  color:#177b7a;
 }
 
 .text-small{
@@ -28,24 +28,48 @@ body{
   display: block;
   transform: translateY(63px);
 }
+
+
+@media only screen and (max-width: 576px) {
+
+
+  .image-hero {
+    display:none;
+  }
+
+  #header-text{
+    padding-bottom:100px ;
+  }
+
+  #footer-row{
+    margin-top: 50px;
+  }
+
+  #social-buttons{
+    margin-top: 30px;
+  }
+
+}
 /********************** NAVBAR ********************************************/
 
 #nav-bar{
 
   z-index: 10;
-  position: sticky;
-  top:0;
-  
+  position: fixed;
+  width: 100%;
 }
 
 .Navbar{
-  background-image:linear-gradient(to right, #17817f, #02504d);
+  background-image:linear-gradient(to right, #02504d, #17817f);
+
+ 
+  
 }
 
 
 /********************** HEADER ********************************************/
 #header-wrapper{
-  background-image:linear-gradient(to right, #17817f, #02504d);
+  background-image:linear-gradient(to right,#02504d, #17817f);
   position: relative;
   color: #fff;
   padding-top: 5%;
@@ -178,6 +202,7 @@ body{
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  margin-bottom: -1px;
 }
 
 .custom-shape-divider-bottom-1655289917 svg {
@@ -209,7 +234,8 @@ body{
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: #fcf0d6;
+  background: #D9E8E3;
+  box-shadow:0px 6px 13px 2px  #bacbc5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,11 +257,17 @@ body{
 
 }
 
+.card-what{
+  background: #D9E8E3;
+  border: none;
+  box-shadow:0px 4px 10px 3px  #bacbc5;
+}
+
 
 
 /********************** DROP POINTS ****************************************/
 #dp-wrapper{
-  padding: 80px 0;
+  padding: 50px 0;
 }
 
 /********************** OUR PARTNERS ****************************************/
@@ -243,7 +275,16 @@ body{
 
 /********************** CONTACT US ****************************************/
 .contact-wrapper{
-  padding: 80px 0;
+  padding: 50px 0;
+}
+
+.form-cu{
+  width: 400px;
+  height: 400px;
+  background-image:linear-gradient(to right, #02504d, #17817f);
+  border-radius: 8px;
+  box-shadow:0px 4px 20px 3px  #c2b9a6;
+  color: rgb(235, 231, 231);
 }
 
 /********************** Footer ****************************************/
@@ -255,6 +296,15 @@ body{
   
 }
 
+.footer-logo{
+  transform: translateY(-25px)
+}
+
+.ul-footer{
+  list-style: none;
+  padding-top: 8%;
+}
+
 .custom-shape-divider-top-1655298418 {
   position: absolute;
   top: 0;
@@ -262,17 +312,18 @@ body{
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  margin-top: -1px;
 }
 
 .custom-shape-divider-top-1655298418 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 79px;
+  height: 70px;
 }
 
 .custom-shape-divider-top-1655298418 .shape-fill {
-  fill: #FFFFFF;
+  fill: #fff;
 }
 
 

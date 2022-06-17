@@ -12,7 +12,7 @@ const Header = () => {
         <Container >
             <Row >
                 
-                <Col xs={12} md={6}>
+                <Col xs={12} md={6} id='header-text'>
                         <p className="header-title"> Donate your shoes wastes </p>
                         <h3> and join us in less waste action</h3>
                             <div className='typed-section'>

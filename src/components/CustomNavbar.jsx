@@ -13,10 +13,10 @@ function CustomNavbar() {
         width="120"
         height="50"
         className="d-inline-block align-top ml-3"
-        alt="repairs logo"
+        alt="reviver logo"
       />
   </Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Toggle  aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="ml-auto">
     <Nav.Link href="#home" className='text-white'>
