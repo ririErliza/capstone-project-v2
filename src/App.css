@@ -54,7 +54,7 @@ body{
 
 #nav-bar{
 
-  z-index: 10;
+  z-index: 99;
   position: fixed;
   width: 100%;
 }
@@ -73,6 +73,7 @@ body{
   position: relative;
   color: #fff;
   padding-top: 5%;
+  z-index:8;
   
 }
 
@@ -103,7 +104,7 @@ body{
 .main-area{
   width: 100%;
   height: 6vh;
-  z-index:0 ;
+  z-index:-1 ;
 }
 
 .circles{
@@ -244,6 +245,7 @@ body{
 /********************** WHY ********************************************/
 .why-wrapper{
   padding: 50px 0;
+  background: #e5eeeb;
 
 }
 
@@ -268,23 +270,54 @@ body{
 /********************** DROP POINTS ****************************************/
 #dp-wrapper{
   padding: 50px 0;
+  background: #e5eeeb;
+
+}
+
+.leaflet-container{
+  width:100%;
+  height:60vh;
+  z-index: 5;
+}
+
+.dp-button{
+  border-radius: 40px;
+  width: 130px;
+  background-color: #02B699;
+  color:#F8FDF4;
+  border: none;
+  box-shadow: 0px 4px 20px 3px rgba(75, 225, 212, 0.42);
 }
 
 /********************** OUR PARTNERS ****************************************/
+#op-wrapper{
+  padding: 50px 0;
+  
+}
 
 
 /********************** CONTACT US ****************************************/
 .contact-wrapper{
   padding: 50px 0;
+  
 }
 
 .form-cu{
   width: 400px;
-  height: 400px;
+  height: 420px;
   background-image:linear-gradient(to right, #02504d, #17817f);
   border-radius: 8px;
   box-shadow:0px 4px 20px 3px  #c2b9a6;
   color: rgb(235, 231, 231);
+}
+
+.button-contact{
+  border-radius: 40px;
+  width: 150px;
+  background-color: #02B699;
+  color:#F8FDF4;
+  border: none;
+  box-shadow: 0px 4px 20px 3px rgba(75, 225, 212, 0.42);
 }
 
 /********************** Footer ****************************************/
@@ -292,7 +325,7 @@ body{
   background-image:linear-gradient(to right, #17817f, #02504d);
   position: relative;
   color: #fff;
-  padding-top: 5%;
+  padding: 50px 0;
   
 }
 
@@ -323,7 +356,7 @@ body{
 }
 
 .custom-shape-divider-top-1655298418 .shape-fill {
-  fill: #fff;
+  fill: #ffff;
 }
 
 

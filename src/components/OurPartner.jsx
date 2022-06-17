@@ -5,7 +5,7 @@ import logos from './partnersLogo.json';
 
 const OurPartner = () => {
   return (
-     <section className="op-wrapper">
+     <section id="op-wrapper">
     <Container >
         
 

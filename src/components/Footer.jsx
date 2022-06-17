@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     
 <section id='footer-wrapper'>
-    <Container className='px-5'>
+    <Container className='px-5 py-5'>
       <Row id='footer-row'>
           <Col xs={12} md={4}>
               <ul className='ul-footer'>
@@ -32,7 +32,7 @@ const Footer = () => {
           <Col xs={12} md={4}>
             <ul className='ul-footer'>
             <p>Address</p>
-              <li className='pb-2'><FiMapPin size='25px'/> <span className='ml-2'>Jl. Imam Bonjol 10, Karawang </span></li>
+              <li className='pb-2'><FiMapPin size='25px'/> <span className='ml-2'>Jl. Imam Bonjol 10, Depok </span></li>
               <li className='pb-2'><BsTelephone size='25px'/> <span className='ml-2'>+62 821 8989 8989</span></li>
               <li><AiOutlineMail size='25px'/> <span className='ml-2'>info@reviver.org</span></li>
             </ul>
@@ -42,10 +42,12 @@ const Footer = () => {
               <li className='pb-3'>About Us</li>
               <li className='pb-3'>Donate</li>
               <li className='pb-3'>Volunteer</li>
-              <li>Drop Points</li>
+              <li className='pb-3'>Drop Points</li>
             </ul>
           </Col>
       </Row>
+    
+
     </Container>
     <div class="custom-shape-divider-top-1655298418">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
