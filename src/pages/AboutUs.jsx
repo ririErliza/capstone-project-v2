@@ -1,6 +1,6 @@
 import {useLayoutEffect} from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import teams from './teamsPictures.json';
+import teams from '../components/teamsPictures.json';
 import timeline from '../img/reviver-timeline.png';
 import founders from '../img/founders.png';
 

@@ -1,10 +1,14 @@
 import React from 'react';
 import { Col, Container, Row, Form, Button } from 'react-bootstrap';
 import { FaFacebookSquare, FaInstagramSquare, FaWhatsappSquare, FaLinkedin} from "react-icons/fa";
+import { useLayoutEffect} from 'react'
 
 const ContactUs = () => {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+})
   return (
-    <section className="contact-wrapper" id="contactUs">
+    <section className="contact-wrapper">
           <Container className='px-5'>
 
             <div id="cu-background"></div>

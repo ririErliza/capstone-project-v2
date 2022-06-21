@@ -1,5 +1,4 @@
 import React from 'react';
-import ContactUs from '../components/ContactUs';
 import DropPoints from '../components/DropPoints';
 import Header from '../components/Header';
 import How from '../components/How';
@@ -17,7 +16,6 @@ const Home = () => {
       <What />
       <DropPoints />
       <OurPartner />
-      <ContactUs />
     </>
   )
 }

@@ -19,7 +19,7 @@ function CustomNavbar() {
   </Navbar.Brand>
   <Navbar.Toggle  aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="ml-auto d-inline-block align-bottom">
+    <Nav className="ml-auto">
 
     
     <Link to="/aboutUs" className='text-white mr-4'>ABOUT US</Link>

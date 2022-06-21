@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import AboutUs from './components/AboutUs';
+import AboutUs from './pages/AboutUs';
 import DonationForm from './pages/DonationForm';
 import VolunteerForm from './pages/VolunteerForm';
 import NotFound from './pages/NotFound';
