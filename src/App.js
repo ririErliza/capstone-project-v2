@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import AboutUs from './components/AboutUs';
-import DonationForm from './components/DonationForm';
-import VolunteerForm from './components/VolunteerForm';
-import NotFound from './components/NotFound';
-import Home from './components/Home';
+import DonationForm from './pages/DonationForm';
+import VolunteerForm from './pages/VolunteerForm';
+import NotFound from './pages/NotFound';
+import Home from './pages/Home';
 import CustomNavbar from './components/CustomNavbar';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
