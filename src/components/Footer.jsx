@@ -40,9 +40,9 @@ const Footer = () => {
           </Col>
           <Col xs={12} md={4}>
             <ul className='ul-footer'>
-              <li className='pb-3'><Link to="/aboutUs"> About Us </Link> </li>
-              <li className='pb-3'><Link to="/donationForm"> Donate</Link></li>
-              <li className='pb-3'><Link to="/volunteerForm"> Volunteer</Link></li>
+              <li className='pb-3'><Link to="/aboutUs" className='text-white'> About Us </Link> </li>
+              <li className='pb-3'><Link to="/donationForm" className='text-white'> Donate</Link></li>
+              <li className='pb-3'><Link to="/volunteerForm" className='text-white'> Volunteer</Link></li>
               <li className='pb-3'>Drop Points</li>
             </ul>
           </Col>

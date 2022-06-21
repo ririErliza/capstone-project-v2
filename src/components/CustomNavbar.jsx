@@ -1,7 +1,6 @@
 import React from 'react';
 import {Navbar, Nav } from 'react-bootstrap';
 import logo from '../img/logo.png';
-import { AiOutlineHome} from "react-icons/ai";
 import { Link } from 'react-router-dom'
 
 
@@ -20,21 +19,15 @@ function CustomNavbar() {
   </Navbar.Brand>
   <Navbar.Toggle  aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="ml-auto">
+    <Nav className="ml-auto d-inline-block align-bottom">
 
     
-      <Nav.Link href="#footer" className='text-white'>ABOUT US</Nav.Link>
+    <Link to="/aboutUs" className='text-white mr-4'>ABOUT US</Link>
 
-      <Nav.Link href="#how" className='text-white'>HOW TO</Nav.Link>
+    <Link to="/contactus" className='text-white mr-4'>CONTACT US</Link>
 
-      <Nav.Link href="#why" className='text-white'>WHY?</Nav.Link>
-
-      <Nav.Link href="#dropPoints" className='text-white'>DROP POINTS</Nav.Link>
-
-      <Nav.Link href="#contactUs" className='text-white mr-2'>CONTACT US</Nav.Link>
-
-      <Link to="/">
-      <AiOutlineHome color='#ffff' size='30px'/>
+      <Link to="/" className='text-white mr-4'>
+      HOME
       </Link>
     
     </Nav>

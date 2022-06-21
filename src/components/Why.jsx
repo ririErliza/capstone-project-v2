@@ -1,9 +1,10 @@
-import React from 'react';
+
 import { Col, Container, Row } from 'react-bootstrap';
 import shoes from '../img/shoes2.png';
 
 
 const Why = () => {
+
   return (
     <section id="why" className='why-wrapper'>
     <Container>
