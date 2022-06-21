@@ -4,8 +4,10 @@ import { FaFacebookSquare, FaInstagramSquare, FaWhatsappSquare, FaLinkedin} from
 
 const ContactUs = () => {
   return (
-    <section className="contact-wrapper">
+    <section className="contact-wrapper" id="contactUs">
           <Container className='px-5'>
+
+            <div id="cu-background"></div>
 
             <h1 className='title-section text-center text-green pb-5'>Contact Us</h1>
 

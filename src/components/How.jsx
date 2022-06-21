@@ -6,7 +6,7 @@ import { MdDoneOutline} from "react-icons/md"
 
 const How = () => {
   return (
-    <section className="how-wrapper">
+    <section className="how-wrapper" id="how">
         <Container className='px-5' >
         
 

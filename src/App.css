@@ -33,7 +33,7 @@ body{
 @media only screen and (max-width: 576px) {
 
 
-  .image-hero {
+  .image-hero,#three-r,.main-area  {
     display:none;
   }
 
@@ -47,6 +47,16 @@ body{
 
   #social-buttons{
     margin-top: 30px;
+  }
+
+  .contact-wrapper{
+    padding: 50px 0;
+    background-image: #ffff;
+  }
+
+  #cu-background{
+    display: none;
+  
   }
 
 }
@@ -99,6 +109,8 @@ body{
   border: none;
   box-shadow: 0px 4px 20px 3px rgba(75, 225, 212, 0.42);
 }
+
+
 
 /*-----------Animation Leaf--------------*/
 .main-area{
@@ -172,13 +184,13 @@ body{
 
 .circles div:nth-child(7){
   left: 35%;
-  animation-delay: 7s;
+  animation-delay: 10s;
 
 }
 
 .circles div:nth-child(8){
   left: 50%;
-  animation-delay: 0s;
+  animation-delay: 1s;
   animation-duration: 15s;
 }
 
@@ -189,7 +201,7 @@ body{
 }
 
 .circles div:nth-child(10){
-  left: 85%;
+  left: 95%;
   animation-delay: 0s;
   animation-duration: 15s;
 
@@ -216,6 +228,16 @@ body{
 .custom-shape-divider-bottom-1655289917 .shape-fill {
   fill: #FFFFFF;
 }
+
+/*---------- Three-R -----*/
+#three-r{
+  transform: translateX(1050px) translateY(300px);
+  position: absolute;
+  z-index: -2;
+}
+
+
+
 
 /********************** HOW ********************************************/
 
@@ -268,7 +290,7 @@ body{
 
 
 /********************** DROP POINTS ****************************************/
-#dp-wrapper{
+.dp-wrapper{
   padding: 50px 0;
   background: #e5eeeb;
 
@@ -299,7 +321,18 @@ body{
 /********************** CONTACT US ****************************************/
 .contact-wrapper{
   padding: 50px 0;
-  
+  position: relative;
+ 
+}
+
+#cu-background{
+  background-image: url("./img/leafbg.png");
+  background-size: cover;
+  width:1200px;
+  height:600px;
+  position: absolute;
+
+
 }
 
 .form-cu{
@@ -321,7 +354,7 @@ body{
 }
 
 /********************** Footer ****************************************/
-#footer-wrapper{
+.footer-wrapper{
   background-image:linear-gradient(to right, #17817f, #02504d);
   position: relative;
   color: #fff;
@@ -362,8 +395,13 @@ body{
 
 /********************** ABOUT US ********************************************/
 .about-wrapper{
-  background: #EDF0F3;
+  padding: 50px 0;
  
+}
+
+
+.timeline{
+  background: #e5eeeb;
 }
 
 

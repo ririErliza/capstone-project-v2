@@ -4,11 +4,12 @@ import logo from '../img/logo.png';
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 import { FiMapPin } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     
-<section id='footer-wrapper'>
+<section className='footer-wrapper' id='footer'>
     <Container className='px-5 py-5'>
       <Row id='footer-row'>
           <Col xs={12} md={4}>
@@ -39,7 +40,7 @@ const Footer = () => {
           </Col>
           <Col xs={12} md={4}>
             <ul className='ul-footer'>
-              <li className='pb-3'>About Us</li>
+              <li className='pb-3'><Link to="/aboutUs"> About Us </Link> </li>
               <li className='pb-3'>Donate</li>
               <li className='pb-3'>Volunteer</li>
               <li className='pb-3'>Drop Points</li>

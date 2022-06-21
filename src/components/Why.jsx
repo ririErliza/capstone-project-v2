@@ -5,7 +5,7 @@ import shoes from '../img/shoes2.png';
 
 const Why = () => {
   return (
-    <section className='why-wrapper'>
+    <section id="why" className='why-wrapper'>
     <Container>
           
         <h1 className='title-section text-center text-green pb-5'>Why?</h1>
