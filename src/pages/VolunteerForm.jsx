@@ -1,5 +1,5 @@
-import { Form, Button, Row, Col } from 'react-bootstrap'
-import { useState } from 'react'
+import { Form, Button, Row, Col, Container } from 'react-bootstrap'
+import { useState, useLayoutEffect} from 'react'
 
 // https://
 // POST
@@ -12,6 +12,9 @@ import { useState } from 'react'
 // duration <-- string
 
 const VolunteerForm = () => {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+})
 
     const [Volunteer, setVolunteer] = useState({
         name: '',
@@ -59,12 +62,15 @@ const VolunteerForm = () => {
           // this is conceptually equivalent to the last .catch() block
         }
       }
+
+      
     
   return (
-    <>
+    <section className="donation-wrapper">
+    <Container className=" text-green px-5 py-5">
     <Row className="justify-content-center my-4">
-        <Col xs={12} md={6} className="text-center">
-      <h3>Volunteer FORM</h3>
+        <Col xs={12} md={6} className="text-center form-box-volunteer">
+      <h2 className='py-4'>VOLUNTEER FORM</h2>
       <Form onSubmit={submitVolunteer}>
         <Form.Group>
           <Form.Label>Your name</Form.Label>
@@ -193,14 +199,15 @@ const VolunteerForm = () => {
         
         
         
-        <Button variant="primary" type="submit">
+        <Button className="text-white button-contact mb-1 mb-sm-0 mx-5 my-4" type="submit">
           Submit
         </Button>
       </Form>
 
       </Col>
       </Row>
-    </>
+    </Container>
+    </section>
   )
 }
 

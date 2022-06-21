@@ -1,6 +1,6 @@
 
-import { Form, Button, Row, Col } from 'react-bootstrap'
-import { useState } from 'react'
+import { Form, Button, Row, Col, Container } from 'react-bootstrap'
+import { useState, useLayoutEffect } from 'react'
 
 // https://
 // POST
@@ -12,6 +12,10 @@ import { useState } from 'react'
 // dropPoints <-- string
 
 const DonationForm = () => {
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+})
  
 
   const [Donation, setDonation] = useState({
@@ -62,10 +66,12 @@ const DonationForm = () => {
   }
 
   return (
-    <>
+    <section className="donation-wrapper">
+    <Container className=" text-green px-5 py-5">
     <Row className="justify-content-center my-4">
-        <Col xs={12} md={6} className="text-center">
-      <h3>DONATION FORM</h3>
+        <Col xs={12} md={6} className="text-center form-box">
+      <h2 className='py-4'>DONATION FORM</h2>
+      <div >
       <Form onSubmit={submitDonation}>
         <Form.Group>
           <Form.Label>Your name</Form.Label>
@@ -179,13 +185,15 @@ const DonationForm = () => {
         
         
         
-        <Button variant="primary" type="submit">
+        <Button className="text-white button-contact mb-1 mb-sm-0 mx-5 my-4" type="submit">
           Submit
         </Button>
       </Form>
+      </div>
       </Col>
       </Row>
-    </>
+    </Container>
+    </section>
   )
 }
 

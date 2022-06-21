@@ -1,10 +1,13 @@
-import React from 'react';
+import {useLayoutEffect} from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import teams from './teamsPictures.json';
 import timeline from '../img/reviver-timeline.png';
 import founders from '../img/founders.png';
 
 const AboutUs = () => {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+})
   return (
     <section className="about-wrapper">
 

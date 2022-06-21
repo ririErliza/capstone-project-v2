@@ -25,9 +25,9 @@ function CustomNavbar() {
     
       <Nav.Link href="#footer" className='text-white'>ABOUT US</Nav.Link>
 
-      <Nav.Link href="#why" className='text-white'>WHY?</Nav.Link>
-
       <Nav.Link href="#how" className='text-white'>HOW TO</Nav.Link>
+
+      <Nav.Link href="#why" className='text-white'>WHY?</Nav.Link>
 
       <Nav.Link href="#dropPoints" className='text-white'>DROP POINTS</Nav.Link>
 
