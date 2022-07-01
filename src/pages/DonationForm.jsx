@@ -20,6 +20,7 @@ const DonationForm = () => {
 
   const [Donation, setDonation] = useState({
     name: '',
+    surname: '',
     email: '',
     phone: '',
     numberOfPeople: 1,
@@ -32,7 +33,7 @@ const DonationForm = () => {
     e.preventDefault()
     try {
       let response = await fetch(
-        'https://',
+        'https://reviver-backend.herokuapp.com/donors',
         {
           method: 'POST',
           body: JSON.stringify(Donation),
@@ -48,6 +49,7 @@ const DonationForm = () => {
       
         setDonation({
             name: '',
+            surname: '',
             email: '',
             phone: '',
             numberOfShoes:1,
@@ -77,7 +79,7 @@ const DonationForm = () => {
           <Form.Control
             type="text"
             required
-            placeholder="Put here your name"
+            placeholder="type here..."
             value={Donation.name}
             // initially is going to be ''
             onChange={(e) => {
@@ -93,11 +95,31 @@ const DonationForm = () => {
           />
         </Form.Group>
         <Form.Group>
+          <Form.Label>Your surname</Form.Label>
+          <Form.Control
+            type="text"
+            required
+            placeholder="type here..."
+            value={Donation.surname}
+            // initially is going to be ''
+            onChange={(e) => {
+              console.log(e.target.value)
+              
+              setDonation({
+                ...Donation,
+                // the spread operator is bringing in here all the existing
+                // key/value pairs of the existing Donation state property
+                surname: e.target.value,
+              })
+            }}
+          />
+        </Form.Group>
+        <Form.Group>
           <Form.Label>Your email</Form.Label>
           <Form.Control
             type="text"
             required
-            placeholder="Put here your name"
+            placeholder="type here..."
             value={Donation.email}
             // initially is going to be ''
             onChange={(e) => {
@@ -117,7 +139,7 @@ const DonationForm = () => {
           <Form.Control
             type="tel"
             required
-            placeholder="Put here your phone number"
+            placeholder="type here..."
             value={Donation.phone}
             onChange={(e) => {
             
