@@ -7,7 +7,7 @@ import { useState, useLayoutEffect} from 'react'
 // name <-- string
 // email <-- string
 // phone <-- string | number
-// choiceOfJob <-- string | number
+// choiceOfJob <-- string
 // location <-- string
 // duration <-- string
 
@@ -18,6 +18,7 @@ const VolunteerForm = () => {
 
     const [Volunteer, setVolunteer] = useState({
         name: '',
+        surname: '',
         email: '',
         phone: '',
         choiceOfJob: 'Social Media Manager',
@@ -30,7 +31,7 @@ const VolunteerForm = () => {
         e.preventDefault()
         try {
           let response = await fetch(
-            'https://',
+            'https://reviver-backend.herokuapp.com/volunteers',
             {
               method: 'POST',
               body: JSON.stringify(Volunteer),
@@ -42,10 +43,11 @@ const VolunteerForm = () => {
           )
           if (response.ok) {
             
-            alert('Volunteer made!')
+            alert('Form submitted!')
           
             setVolunteer({
                 name: '',
+                surname: '',
                 email: '',
                 phone: '',
                 choiceOfJob: 'Social Media Manager',
@@ -77,7 +79,7 @@ const VolunteerForm = () => {
           <Form.Control
             type="text"
             required
-            placeholder="Put here your name"
+            placeholder="type here..."
             value={Volunteer.name}
             // initially is going to be ''
             onChange={(e) => {
@@ -93,11 +95,31 @@ const VolunteerForm = () => {
           />
         </Form.Group>
         <Form.Group>
+          <Form.Label>Your surname</Form.Label>
+          <Form.Control
+            type="text"
+            required
+            placeholder="type here..."
+            value={Volunteer.surname}
+            // initially is going to be ''
+            onChange={(e) => {
+              console.log(e.target.value)
+              
+              setVolunteer({
+                ...Volunteer,
+                // the spread operator is bringing in here all the existing
+                // key/value pairs of the existing Volunteer state property
+                surname: e.target.value,
+              })
+            }}
+          />
+        </Form.Group>
+        <Form.Group>
           <Form.Label>Your email</Form.Label>
           <Form.Control
             type="text"
             required
-            placeholder="Put here your name"
+            placeholder="type here..."
             value={Volunteer.email}
             // initially is going to be ''
             onChange={(e) => {
@@ -117,7 +139,7 @@ const VolunteerForm = () => {
           <Form.Control
             type="tel"
             required
-            placeholder="Put here your phone number"
+            placeholder="type here..."
             value={Volunteer.phone}
             onChange={(e) => {
             

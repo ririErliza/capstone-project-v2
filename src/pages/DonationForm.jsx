@@ -50,7 +50,6 @@ const DonationForm = () => {
             name: '',
             email: '',
             phone: '',
-            numberOfPeople: 1,
             numberOfShoes:1,
             dropPoints:'Depok',
         })
