@@ -95,7 +95,7 @@ body{
 
 .button-volunteer{
   border-radius: 40px;
-  background-color: #fcf0d6;
+  background-color: #D9E8E3;
   color:#015441;
   border: none;
   box-shadow: 0px 4px 20px 3px rgba(68, 234, 220, 0.42);
@@ -410,7 +410,7 @@ body{
 
 .form-box{
   width: 700px;
-  height: 620px;
+  height: 700px;
   background-image:linear-gradient(to right, #02504d, #17817f);
   border-radius: 8px;
   box-shadow:0px 4px 20px 3px  #c2b9a6;

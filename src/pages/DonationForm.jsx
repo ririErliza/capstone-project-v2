@@ -45,7 +45,7 @@ const DonationForm = () => {
       )
       if (response.ok) {
         
-        alert('Donation made!')
+        alert('Form submitted!')
       
         setDonation({
             name: '',
