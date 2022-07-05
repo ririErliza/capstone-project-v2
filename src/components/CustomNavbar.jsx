@@ -8,7 +8,8 @@ function CustomNavbar() {
   return (
     <section id="nav-bar">
     <Navbar collapseOnSelect expand="lg" className="Navbar">
-  <Navbar.Brand href="#home">
+  <Navbar.Brand>
+    <Link to="/">
   <img
         src={logo}
         width="120"
@@ -16,6 +17,7 @@ function CustomNavbar() {
         className="d-inline-block align-top ml-3"
         alt="reviver logo"
       />
+      </Link>
   </Navbar.Brand>
   <Navbar.Toggle  aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">

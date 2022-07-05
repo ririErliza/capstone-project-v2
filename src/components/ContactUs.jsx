@@ -34,7 +34,7 @@ const ContactUs = () => {
                   </Form.Group>
                 </Form>
 
-                <Button className="text-white button-contact mb-1 mb-sm-0 mx-5 my-4">Send</Button>
+                <Button className="button-contact mb-1 mb-sm-0 mx-5 my-4">Send</Button>
               
                   </div>
                 

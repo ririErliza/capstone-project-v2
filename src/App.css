@@ -93,7 +93,7 @@ body{
 }
 
 
-.button-volunteer{
+#button-volunteer{
   border-radius: 40px;
   background-color: #D9E8E3;
   color:#015441;
@@ -101,12 +101,22 @@ body{
   box-shadow: 0px 4px 20px 3px rgba(68, 234, 220, 0.42);
 }
 
-.button-donate{
+#button-volunteer:hover{
+  background-color: #02504d72;
+  color: #D9E8E3;
+}
+
+#button-donate{
   border-radius: 40px;
   background-color: #02B699;
-  color:#F8FDF4;
+  color:#D9E8E3;
   border: none;
   box-shadow: 0px 4px 20px 3px rgba(75, 225, 212, 0.42);
+}
+
+#button-donate:hover{
+  background-color: #F8FDF4;
+  color: #015441;
 }
 
 
@@ -310,6 +320,12 @@ body{
   box-shadow: 0px 4px 20px 3px rgba(75, 225, 212, 0.42);
 }
 
+.dp-button:hover{
+  background-color: #F8FDF4;
+  color:#015441;
+
+}
+
 /********************** OUR PARTNERS ****************************************/
 #op-wrapper{
   padding: 50px 0;
@@ -349,6 +365,12 @@ body{
   color:#F8FDF4;
   border: none;
   box-shadow: 0px 4px 20px 3px rgba(75, 225, 212, 0.42);
+}
+
+.button-contact:hover{
+  background-color: #F8FDF4;
+  color:#015441;
+
 }
 
 /********************** Footer ****************************************/

@@ -33,8 +33,8 @@ const Header = () => {
                                     
                             </div>
                         
-                            <Button onClick={() => navigate('/volunteerForm')} size="lg" className="mr-5 mt-5 button-volunteer mb-1 mb-sm-0">Volunteer</Button>
-                            <Button onClick={() => navigate('/donationForm')} size="lg" className="mt-5 text-white button-donate mb-1 mb-sm-0">Donate</Button>
+                            <Button onClick={() => navigate('/volunteerForm')} size="lg" id="button-volunteer"className="mr-5 mt-5  mb-1 mb-sm-0">Volunteer</Button>
+                            <Button onClick={() => navigate('/donationForm')} size="lg" id="button-donate" className="mt-5 mb-1 mb-sm-0">Donate</Button>
                         
                     
                     
