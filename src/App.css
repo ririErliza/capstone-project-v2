@@ -32,11 +32,24 @@ body{
 
 @media only screen and (max-width: 576px) {
 
-
+  #responsive-navbar-nav{
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .nav-link{
+    padding-bottom: 20px;
+  }
+  
   .image-hero,#three-r,.main-area  {
     display:none;
   }
 
+  #header-wrapper{
+
+    padding-bottom: 5%;
+
+    
+  }
   #header-text{
     padding-bottom:100px ;
   }
@@ -115,7 +128,7 @@ body{
 }
 
 #button-donate:hover{
-  background-color: #F8FDF4;
+  background-color: #c5c7c3;
   color: #015441;
 }
 
@@ -456,6 +469,11 @@ body{
   
 }
 
+/********************** ADDRESS LIST ********************************************/
+.al-wrapper{
+  padding: 100px 0;
+ 
+}
 
 
 

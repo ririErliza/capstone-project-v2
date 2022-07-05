@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 function CustomNavbar() {
   return (
     <section id="nav-bar">
-    <Navbar collapseOnSelect expand="lg" className="Navbar">
+    <Navbar collapseOnSelect expand="lg" className="Navbar navbar-dark">
   <Navbar.Brand>
     <Link to="/">
   <img
@@ -24,11 +24,11 @@ function CustomNavbar() {
     <Nav className="ml-auto">
 
     
-    <Link to="/aboutUs" className='text-white mr-4'>ABOUT US</Link>
+    <Link to="/aboutUs" className='text-white mr-4 nav-link'>ABOUT US</Link>
 
-    <Link to="/contactus" className='text-white mr-4'>CONTACT US</Link>
+    <Link to="/contactus" className='text-white mr-4 nav-link'>CONTACT US</Link>
 
-      <Link to="/" className='text-white mr-4'>
+      <Link to="/" className='text-white mr-4 nav-link'>
       HOME
       </Link>
     

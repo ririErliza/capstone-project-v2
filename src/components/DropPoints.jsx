@@ -2,10 +2,13 @@ import React from 'react';
 import { Container, Button} from 'react-bootstrap';
 import {MapContainer, Marker, Popup, TileLayer} from 'react-leaflet';
 import cities from './address.json';
-// import {Icon} from 'leaflet';
+import {useNavigate } from 'react-router-dom'
+
+
 
 
 const DropPoints = () => {
+  const navigate = useNavigate()
   return (
     <section id='dropPoints' className='dp-wrapper'>
     <Container className='px-5 text-center's>
@@ -35,7 +38,7 @@ const DropPoints = () => {
            
           </MapContainer>
       <p className='mt-4 text-center'>Click the pointer on the map to see the address or see the list of drop points here</p>
-      <Button className='dp-button'>Address List</Button>
+      <Button className='dp-button' onClick={() => navigate('/addresslist')}>Address List</Button>
         
 
             

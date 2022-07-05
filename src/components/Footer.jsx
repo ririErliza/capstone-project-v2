@@ -45,7 +45,7 @@ const Footer = () => {
               <li className='pb-3'><Link to="/aboutUs" className='text-white'> About Us </Link> </li>
               <li className='pb-3'><Link to="/donationForm" className='text-white'> Donate</Link></li>
               <li className='pb-3'><Link to="/volunteerForm" className='text-white'> Volunteer</Link></li>
-              <li className='pb-3'>Drop Points</li>
+              <li className='pb-3'><Link to="/addresslist" className='text-white'>Drop Points</Link></li>
             </ul>
           </Col>
       </Row>

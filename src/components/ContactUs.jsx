@@ -1,4 +1,3 @@
-import React from 'react';
 import { Col, Container, Row, Form, Button } from 'react-bootstrap';
 import { FaFacebookSquare, FaInstagramSquare, FaWhatsappSquare, FaLinkedin} from "react-icons/fa";
 import { useLayoutEffect} from 'react'
