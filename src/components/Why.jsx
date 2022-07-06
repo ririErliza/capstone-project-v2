@@ -9,7 +9,7 @@ const Why = () => {
     <section className='why-wrapper'>
     <Container>
           
-        <h1 className='title-section text-center text-green pb-5'>Why?</h1>
+        <h1 className='why-title text-center title-section pb-5'>Why?</h1>
         
         <Row>
       
@@ -17,7 +17,7 @@ const Why = () => {
             
             <img
                     src={shoes}
-                    width="850"
+                    width="700"
                     height="auto"
                     className="image-shoes2 img-fluid"
                     alt="shoes"

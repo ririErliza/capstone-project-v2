@@ -30,14 +30,11 @@ body{
 }
 
 
-@media only screen and (max-width: 576px) {
+@media screen and (max-width: 576px) {
 
   #responsive-navbar-nav{
     padding-top: 20px;
     padding-left: 20px;
-  }
-  .nav-link{
-    padding-bottom: 20px;
   }
   
   .image-hero,#three-r,.main-area  {
@@ -71,6 +68,7 @@ body{
     display: none;
   
   }
+
 
 }
 /********************** NAVBAR ********************************************/
@@ -289,8 +287,12 @@ body{
 /********************** WHY ********************************************/
 .why-wrapper{
   padding: 50px 0;
-  background: #e5eeeb;
+  background: #02504d;
 
+}
+
+.why-title{
+  color: #8ce4e3;
 }
 
 
@@ -394,6 +396,8 @@ body{
   padding: 50px 0;
   
 }
+
+
 
 .footer-logo{
   transform: translateY(-25px)

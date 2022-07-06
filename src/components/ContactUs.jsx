@@ -8,7 +8,7 @@ const ContactUs = () => {
 })
   return (
     <section className="contact-wrapper">
-          <Container className='px-5'>
+          <Container className='px-5 py-5'>
 
             <div id="cu-background"></div>
 

@@ -206,7 +206,7 @@ const DonationForm = () => {
         
         
         
-        <Button className="text-white button-contact mb-1 mb-sm-0 mx-5 my-4" type="submit">
+        <Button className="button-contact mb-1 mb-sm-0 mx-5 my-4" type="submit">
           Submit
         </Button>
       </Form>

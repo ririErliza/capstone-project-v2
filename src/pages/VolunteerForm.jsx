@@ -151,7 +151,7 @@ const VolunteerForm = () => {
           />
         </Form.Group>
         <Form.Group>
-          <Form.Label>Which role do you want to volunteer?</Form.Label>
+          <Form.Label>Role</Form.Label>
           <Form.Control
             as="select"
             required
@@ -173,7 +173,7 @@ const VolunteerForm = () => {
         </Form.Group>
         
         <Form.Group>
-          <Form.Label>Please choose one of our location</Form.Label>
+          <Form.Label>Location</Form.Label>
           <Form.Control
             as="select"
             required
@@ -198,7 +198,7 @@ const VolunteerForm = () => {
           </Form.Control>
         </Form.Group>
         <Form.Group>
-          <Form.Label>How long can you commit to volunteer?</Form.Label>
+          <Form.Label>Duration</Form.Label>
           <Form.Control
             as="select"
             required
@@ -218,10 +218,7 @@ const VolunteerForm = () => {
             <option>6 Months</option>
           </Form.Control>
         </Form.Group>
-        
-        
-        
-        <Button className="text-white button-contact mb-1 mb-sm-0 mx-5 my-4" type="submit">
+        <Button className="button-contact mx-5 my-4"  type="submit">
           Submit
         </Button>
       </Form>

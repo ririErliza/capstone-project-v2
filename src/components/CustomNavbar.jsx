@@ -1,10 +1,11 @@
 import React from 'react';
 import {Navbar, Nav } from 'react-bootstrap';
 import logo from '../img/logo.png';
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 
 function CustomNavbar() {
+  const location = useLocation()
   return (
     <section id="nav-bar">
     <Navbar collapseOnSelect expand="lg" className="Navbar navbar-dark">
@@ -24,13 +25,17 @@ function CustomNavbar() {
     <Nav className="ml-auto">
 
     
-    <Link to="/aboutUs" className='text-white mr-4 nav-link'>ABOUT US</Link>
+    <Link to="/aboutUs" className='text-white mr-4 '> <div className={
+                location.pathname === '/aboutUs' ? 'nav-link active' : 'nav-link'
+              }> ABOUT US </div> </Link>
 
-    <Link to="/contactus" className='text-white mr-4 nav-link'>CONTACT US</Link>
+    <Link to="/contactus" className='text-white mr-4 '> <div className={
+                location.pathname === '/contactus' ? 'nav-link active' : 'nav-link'
+              } > CONTACT US </div> </Link>
 
-      <Link to="/" className='text-white mr-4 nav-link'>
-      HOME
-      </Link>
+    <Link to="/" className='text-white mr-4 '> <div className={
+                location.pathname === '/' ? 'nav-link active' : 'nav-link'
+              }> HOME </div>  </Link>
     
     </Nav>
   </Navbar.Collapse>

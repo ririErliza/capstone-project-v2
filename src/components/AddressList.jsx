@@ -8,8 +8,8 @@ const AddressList = () => {
     })
   return (
     <section className='al-wrapper'>
-        <Container className='px-5'>
-            <h3 className='text-center py-3'>Address List</h3>
+        <Container className='py-3 px-5'>
+            <h1 className='text-center text-green mb-5'>List of Address</h1>
                 <Row>
                     <Table striped bordered hover size="sm" className='text-center'>
                         <thead >
