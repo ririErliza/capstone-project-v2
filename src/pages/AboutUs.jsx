@@ -27,7 +27,7 @@ const AboutUs = () => {
                       className=" img-fluid "
                       alt="indonesian man"
                       />
-                      <div className='text-center'>Taufan, Founder Reviver</div>
+                      <div className='text-center'>Taufan, Founder</div>
                       </Col>
 
                       <Col xs={12} md={4} className="about-title px-4 ">
@@ -44,7 +44,7 @@ const AboutUs = () => {
                       className=" img-fluid"
                       alt="indonesian man"
                       />
-                      <div className='text-center'>Agus, Co-Founder Reviver</div>
+                      <div className='text-center'>Agus, Co-Founder</div>
                       </Col>
                 
             
