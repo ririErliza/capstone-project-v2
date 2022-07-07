@@ -1,5 +1,5 @@
 
-import { Form, Button, Row, Col, Container } from 'react-bootstrap'
+import { Form, Button, Row, Col, Container, Alert } from 'react-bootstrap'
 import { useState } from 'react'
 
 // https://
@@ -12,7 +12,7 @@ import { useState } from 'react'
 // dropPoints <-- string
 
 const DonationForm = () => {
- 
+  const [isError, setIsError] = useState(false)
 
   const [Donation, setDonation] = useState({
     name: '',
@@ -53,12 +53,12 @@ const DonationForm = () => {
         window.location="/success";
       } else {
         // aww snap!
-        alert('error!')
+        setIsError(true)
         // I'll not reset the form in this case
       }
     } catch (error) {
       console.log(error)
-      // this is conceptually equivalent to the last .catch() block
+      setIsError(true)
     }
   }
 
@@ -206,6 +206,8 @@ const DonationForm = () => {
           Submit
         </Button>
       </Form>
+
+      {isError && <Alert variant="danger">Aww snap, we got an error 😣</Alert>}
       </div>
       </Col>
       </Row>

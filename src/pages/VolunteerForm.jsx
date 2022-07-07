@@ -10,12 +10,12 @@ import { useState} from 'react'
 // phone <-- string | number
 // choiceOfJob <-- string
 // location <-- string
-// duration <-- string
+// duration <-- string  
 
 const VolunteerForm = () => {
 
 
-const [isError, setIsError] = useState(false)
+    const [isError, setIsError] = useState(false)
     const [Volunteer, setVolunteer] = useState({
         name: '',
         surname: '',
@@ -76,7 +76,7 @@ const [isError, setIsError] = useState(false)
     <Row className="justify-content-center my-4">
         <Col xs={12} md={6} className="text-center form-box-volunteer">
       <h2 className='py-4'>VOLUNTEER FORM</h2>
-      
+      <div >
       <Form onSubmit={submitVolunteer}>
         <Form.Group>
           <Form.Label>Your name</Form.Label>
@@ -228,10 +228,11 @@ const [isError, setIsError] = useState(false)
       </Form>
 
       {isError && <Alert variant="danger">Aww snap, we got an error 😣</Alert>}
-
+      </div >
       </Col>
       </Row>
     </Container>
+    
     </section>
   )
 }
