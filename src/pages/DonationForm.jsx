@@ -12,6 +12,8 @@ import { useState } from 'react'
 // dropPoints <-- string
 
 const DonationForm = () => {
+
+  const [isSubmitting, setSubmitting] = useState(false)
   const [isError, setIsError] = useState(false)
 
   const [Donation, setDonation] = useState({
@@ -27,6 +29,7 @@ const DonationForm = () => {
   
   const submitDonation = async (e) => {
     e.preventDefault()
+    setSubmitting(true)
     try {
       let response = await fetch(
         'https://reviver-backend.herokuapp.com/donors',
@@ -39,6 +42,7 @@ const DonationForm = () => {
           },
         }
       )
+      
       if (response.ok) {
         
       
@@ -202,8 +206,11 @@ const DonationForm = () => {
         
         
         
-        <Button className="button-contact mb-1 mb-sm-0 mx-5 my-4" type="submit">
-          Submit
+        <Button disabled= {isSubmitting} className="button-contact mb-1 mb-sm-0 mx-5 my-4" type="submit">
+        {isSubmitting && (
+                  <span className="spinner-border spinner-border-sm mr-3"></span>
+        )} 
+        Submit
         </Button>
       </Form>
 

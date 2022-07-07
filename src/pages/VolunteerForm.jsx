@@ -14,7 +14,7 @@ import { useState} from 'react'
 
 const VolunteerForm = () => {
 
-
+    const [isSubmitting, setSubmitting] = useState(false)
     const [isError, setIsError] = useState(false)
     const [Volunteer, setVolunteer] = useState({
         name: '',
@@ -29,6 +29,7 @@ const VolunteerForm = () => {
       
       const submitVolunteer = async (e) => {
         e.preventDefault()
+        setSubmitting(true)
         try {
           let response = await fetch(
             'https://reviver-backend.herokuapp.com/volunteers',
@@ -223,6 +224,9 @@ const VolunteerForm = () => {
           </Form.Control>
         </Form.Group>
         <Button className="button-contact mx-5 my-4"  type="submit">
+        {isSubmitting && (
+                  <span className="spinner-border spinner-border-sm mr-3"></span>
+        )} 
           Submit
         </Button>
       </Form>
