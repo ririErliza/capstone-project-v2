@@ -1,5 +1,6 @@
-import { Form, Button, Row, Col, Container, Spinner, Alert } from 'react-bootstrap'
+import { Form, Button, Row, Col, Container,Alert } from 'react-bootstrap'
 import { useState} from 'react'
+
 
 // https://
 // POST
@@ -13,7 +14,7 @@ import { useState} from 'react'
 
 const VolunteerForm = () => {
 
-const [isLoading, setIsLoading] = useState(false)
+
 const [isError, setIsError] = useState(false)
     const [Volunteer, setVolunteer] = useState({
         name: '',
@@ -42,7 +43,6 @@ const [isError, setIsError] = useState(false)
           )
           if (response.ok) {
          
-            setIsLoading(true)
           
             setVolunteer({
                 name: '',
@@ -52,18 +52,19 @@ const [isError, setIsError] = useState(false)
                 choiceOfJob: 'Social Media Manager',
                 location:'Depok',
                 duration: '3 Months',
-            })
+            });
+
+            window.location="/success";
           } else {
             // aww snap!
             setIsError(true)
-            setIsLoading(false)
+         
             // I'll not reset the form in this case
           }
         } catch (error) {
           console.log(error)
           setIsError(true)
-          setIsLoading(false)
-          // this is conceptually equivalent to the last .catch() block
+ 
         }
       }
 
@@ -75,15 +76,7 @@ const [isError, setIsError] = useState(false)
     <Row className="justify-content-center my-4">
         <Col xs={12} md={6} className="text-center form-box-volunteer">
       <h2 className='py-4'>VOLUNTEER FORM</h2>
-      {isLoading && (
-        // the && makes the Spinner appear when isLoading is true
-        <Spinner animation="border" variant="success" />
-      )}
-
-      {isLoading && (
-        <Alert variant="danger">Form submitted</Alert>
-      )}
-      {isError && <Alert variant="danger">Aww snap, we got an error 😣</Alert>}
+      
       <Form onSubmit={submitVolunteer}>
         <Form.Group>
           <Form.Label>Your name</Form.Label>
@@ -233,6 +226,8 @@ const [isError, setIsError] = useState(false)
           Submit
         </Button>
       </Form>
+
+      {isError && <Alert variant="danger">Aww snap, we got an error 😣</Alert>}
 
       </Col>
       </Row>

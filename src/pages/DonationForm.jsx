@@ -1,6 +1,6 @@
 
 import { Form, Button, Row, Col, Container } from 'react-bootstrap'
-import { useState, useLayoutEffect } from 'react'
+import { useState } from 'react'
 
 // https://
 // POST
@@ -12,10 +12,6 @@ import { useState, useLayoutEffect } from 'react'
 // dropPoints <-- string
 
 const DonationForm = () => {
-
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0)
-})
  
 
   const [Donation, setDonation] = useState({
@@ -45,7 +41,6 @@ const DonationForm = () => {
       )
       if (response.ok) {
         
-        alert('Form submitted!')
       
         setDonation({
             name: '',
@@ -55,6 +50,7 @@ const DonationForm = () => {
             numberOfShoes:1,
             dropPoints:'Depok',
         })
+        window.location="/success";
       } else {
         // aww snap!
         alert('error!')

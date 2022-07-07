@@ -29,6 +29,11 @@ body{
   transform: translateY(63px);
 }
 
+.wrapper{
+  
+    padding: 50px 0;
+   
+}
 
 @media screen and (max-width: 576px) {
 
@@ -479,6 +484,11 @@ body{
  
 }
 
+/********************** SUCCESS PAGE ********************************************/
+#success-container{
+  width: auto;
+  height: 60vh;
+}
 
 
 

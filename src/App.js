@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import DropPoints from './components/DropPoints';
 import ContactUs from './components/ContactUs';
 import AddressList from './components/AddressList';
+import Success from './pages/Success';
 
 
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/volunteerForm" element={<VolunteerForm />}   />
           <Route path="/contactus" element={<ContactUs />}   />
           <Route path="/addresslist" element={<AddressList />} />
+          <Route path="/success" element={<Success />} />
           <Route path="*" component={NotFound}  />
       </Routes>
 
