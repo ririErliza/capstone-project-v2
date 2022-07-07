@@ -1,5 +1,5 @@
-import { Form, Button, Row, Col, Container } from 'react-bootstrap'
-import { useState, useLayoutEffect} from 'react'
+import { Form, Button, Row, Col, Container, Spinner, Alert } from 'react-bootstrap'
+import { useState} from 'react'
 
 // https://
 // POST
@@ -12,10 +12,9 @@ import { useState, useLayoutEffect} from 'react'
 // duration <-- string
 
 const VolunteerForm = () => {
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0)
-})
 
+const [isLoading, setIsLoading] = useState(false)
+const [isError, setIsError] = useState(false)
     const [Volunteer, setVolunteer] = useState({
         name: '',
         surname: '',
@@ -42,8 +41,8 @@ const VolunteerForm = () => {
             }
           )
           if (response.ok) {
-            
-            alert('Form submitted!')
+         
+            setIsLoading(true)
           
             setVolunteer({
                 name: '',
@@ -56,11 +55,14 @@ const VolunteerForm = () => {
             })
           } else {
             // aww snap!
-            alert('error!')
+            setIsError(true)
+            setIsLoading(false)
             // I'll not reset the form in this case
           }
         } catch (error) {
           console.log(error)
+          setIsError(true)
+          setIsLoading(false)
           // this is conceptually equivalent to the last .catch() block
         }
       }
@@ -73,6 +75,15 @@ const VolunteerForm = () => {
     <Row className="justify-content-center my-4">
         <Col xs={12} md={6} className="text-center form-box-volunteer">
       <h2 className='py-4'>VOLUNTEER FORM</h2>
+      {isLoading && (
+        // the && makes the Spinner appear when isLoading is true
+        <Spinner animation="border" variant="success" />
+      )}
+
+      {isLoading && (
+        <Alert variant="danger">Form submitted</Alert>
+      )}
+      {isError && <Alert variant="danger">Aww snap, we got an error 😣</Alert>}
       <Form onSubmit={submitVolunteer}>
         <Form.Group>
           <Form.Label>Your name</Form.Label>
