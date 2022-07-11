@@ -17,7 +17,7 @@ const Header = () => {
                 
                 <Col xs={12} md={6} id='header-text'>
                         <p className="header-title"> Donate your shoes wastes </p>
-                        <h3> and join us in less waste action</h3>
+                        <p className='second-title'> and join us in less waste action</p>
                             <div className='typed-section'>
 
                                 <h4>
