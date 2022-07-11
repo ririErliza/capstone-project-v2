@@ -87,8 +87,6 @@ const DonationForm = () => {
               
               setDonation({
                 ...Donation,
-                // the spread operator is bringing in here all the existing
-                // key/value pairs of the existing Donation state property
                 name: e.target.value,
               })
             }}
