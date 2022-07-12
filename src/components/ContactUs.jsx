@@ -1,6 +1,6 @@
-import { Col, Container, Row, Form, Button } from 'react-bootstrap';
+import { Col, Container, Row} from 'react-bootstrap';
 import { FaFacebookSquare, FaInstagramSquare, FaWhatsappSquare, FaLinkedin} from "react-icons/fa";
-import { useLayoutEffect, useRef} from 'react';
+import { useLayoutEffect, useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
 
 
@@ -8,16 +8,19 @@ const ContactUs = () => {
   useLayoutEffect(() => {
     window.scrollTo(0,0)
 })
-
+const [isSubmitting, setSubmitting] = useState(false)
 const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setSubmitting(true)
 
     emailjs.sendForm('gmail', 'template1', form.current, 'HmZUwb2_em0hFDGw7')
       .then((result) => {
           console.log(result.text);
+          setSubmitting(false)
           alert('Message Sent!')
+          
       }, (error) => {
           console.log(error.text);
       });
@@ -38,26 +41,34 @@ const form = useRef();
               <Col xs={12} md={12} className="text-green center-div text-center">
                   
                   <div className="form-cu">
-                  <Form ref={form} onSubmit={sendEmail} className='mx-4 my-4'>
+                  <form ref={form} onSubmit={sendEmail}>
+                    <div className='input-row'>
+                      <label>Name</label>
+                      <input type="text" name="user_name" />
+                    </div>
+                  
+                    <div className='input-row'>
+                      <label>Email</label>
+                      <input type="email" name="user_email" />
+                    </div>
 
-                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Your Name</Form.Label>
-                        <Form.Control type="text" name="visitor_name" className="w-100" />
-                      </Form.Group>
-                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Your Email</Form.Label>
-                        <Form.Control type="email" name="visitor_email" className="w-100"
-                        />
-                      </Form.Group>
-                      
-                      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                        <Form.Label>Your Message</Form.Label>
-                        <Form.Control as="textarea" name="message" rows={3} className="w-100"/>
-                      </Form.Group>
-                </Form>
+                    <div className='input-row'>
+                      <label>Message</label>
+                      <textarea name="message" />
+                    </div>
+                 
+                  <button type="submit" className='button-contact'>
+                  {isSubmitting && (
+                  <span className="spinner-border spinner-border-sm mr-3"></span>
+                  )}
+                  Send
+                  </button>
+                  
+      
 
-                <Button type="submit" value="Send" className="button-contact mb-1 mb-sm-0 mx-5 my-4">Send</Button>
-              
+                  </form>
+                
+                  
                   </div>
                 
               </Col>
