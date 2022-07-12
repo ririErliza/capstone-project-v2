@@ -13,8 +13,8 @@ const OurPartner = () => {
         <Row>
         
            {logos.map((logo) => (
-            <Col xs={4} md={2} >
-              <div key={logo.id}>
+            <Col xs={4} md={2} key={logo.id}>
+              <div >
                 <img
                     src={logo.image}
                     width="300"
