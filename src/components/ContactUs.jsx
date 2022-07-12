@@ -1,6 +1,7 @@
 import { Col, Container, Row, Form, Button } from 'react-bootstrap';
 import { FaFacebookSquare, FaInstagramSquare, FaWhatsappSquare, FaLinkedin} from "react-icons/fa";
-import { useLayoutEffect, useState} from 'react';
+import { useLayoutEffect, useRef} from 'react';
+import emailjs from '@emailjs/browser';
 
 
 const ContactUs = () => {
@@ -8,12 +9,21 @@ const ContactUs = () => {
     window.scrollTo(0,0)
 })
 
-const [Contact, setContact] = useState({
-  email: '',
-  name: '',
-  message: '',
- 
-})
+const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('gmail', 'template1', form.current, 'HmZUwb2_em0hFDGw7')
+      .then((result) => {
+          console.log(result.text);
+          alert('Message Sent!')
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset()
+  };
+
 
 
   return (
@@ -28,43 +38,25 @@ const [Contact, setContact] = useState({
               <Col xs={12} md={12} className="text-green center-div text-center">
                   
                   <div className="form-cu">
-                  <Form className='mx-4 my-4'>
-                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Your Email</Form.Label>
-                        <Form.Control type="email" name="email" className="w-100" value={Contact.email}
-                        onChange={(e) => {
-                          console.log(e.target.value)
-                        setContact({
-                          ...Contact,
-                          email: e.target.value,
-                        })
-                      }}/>
-                      </Form.Group>
+                  <Form ref={form} onSubmit={sendEmail} className='mx-4 my-4'>
+
                       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Your Name</Form.Label>
-                        <Form.Control type="text" name="name" className="w-100" value={Contact.name}
-                        onChange={(e) => {
-                          console.log(e.target.value)
-                        setContact({
-                          ...Contact,
-                          name: e.target.value,
-                        })
-                      }}/>
+                        <Form.Control type="text" name="visitor_name" className="w-100" />
                       </Form.Group>
+                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Label>Your Email</Form.Label>
+                        <Form.Control type="email" name="visitor_email" className="w-100"
+                        />
+                      </Form.Group>
+                      
                       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                         <Form.Label>Your Message</Form.Label>
-                        <Form.Control as="textarea" name="message" rows={3} className="w-100" value={Contact.message}
-                        onChange={(e) => {
-                   console.log(e.target.value)
-                        setContact({
-                          ...Contact,
-                          message: e.target.value,
-                        })
-                      }}/>
+                        <Form.Control as="textarea" name="message" rows={3} className="w-100"/>
                       </Form.Group>
                 </Form>
 
-                <Button type="submit" className="button-contact mb-1 mb-sm-0 mx-5 my-4">Send</Button>
+                <Button type="submit" value="Send" className="button-contact mb-1 mb-sm-0 mx-5 my-4">Send</Button>
               
                   </div>
                 
