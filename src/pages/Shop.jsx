@@ -7,6 +7,12 @@ const Shop = () => {
 const products= [
     {id:1, name:'T-shirt', description: 'Variant colors', price:'$15'},
     {id:2, name:'Shopping Bag', description: 'Variant colors', price:'$10'},
+    {id:3, name:'T-shirt', description: 'Variant colors', price:'$15'},
+    {id:4, name:'Shopping Bag', description: 'Variant colors', price:'$10'},
+    {id:5, name:'T-shirt', description: 'Variant colors', price:'$15'},
+    {id:6, name:'Shopping Bag', description: 'Variant colors', price:'$10'},
+    {id:7, name:'T-shirt', description: 'Variant colors', price:'$15'},
+    {id:8, name:'Shopping Bag', description: 'Variant colors', price:'$10'},
 ]
     
   return (

@@ -28,6 +28,7 @@ const Footer = () => {
                 <li>
                   <p className='text-light text-small'>We are a group of people who want to contribute to preserve our environment by reducing, reusing, and recyling waste products.</p>
                 </li>
+                © 2022 REVIVER ORG
               </ul>
               
               <ScrollToTop smooth/>
