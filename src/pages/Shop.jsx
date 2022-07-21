@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import NavShop from '../components/NavShop'
 import SingleProduct from '../components/SingleProduct'
 
 const Shop = () => {
@@ -10,9 +11,11 @@ const products= [
     
   return (
     <section id="shop-wrapper">
+        
 
   
-        <Container className=" text-green px-5 py-5">
+        <Container fluid className=" text-green px-5 py-5">
+        <NavShop/>
         <h1 className='pt-4 text-center'>Available Merchandise</h1>
             <Row className='justify-content-md-center pt-5'>
                 {products.map((product)=>(
