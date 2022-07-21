@@ -14,6 +14,8 @@ const products= [
     {id:7, name:'T-shirt', description: 'Variant colors', price:'$15'},
     {id:8, name:'Shopping Bag', description: 'Variant colors', price:'$10'},
 ]
+
+
     
   return (
     <section id="shop-wrapper">

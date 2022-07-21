@@ -4,7 +4,8 @@ import {MdAddShoppingCart} from "react-icons/md"
 
 
 
-const SingleProduct = ({product}) => {
+const SingleProduct = ({product, onAddToCart}) => {
+    
     
   return (
     <>
@@ -22,7 +23,9 @@ const SingleProduct = ({product}) => {
             {product.price}
             </Card.Text>
           
-            <Button className='btn btn-secondary btn-sm float-right'> <MdAddShoppingCart style={{ fontSize:'1.5em' }}/> </Button>
+            <Button onClick={onAddToCart} className='btn btn-secondary btn-sm float-right'> 
+                <MdAddShoppingCart style={{ fontSize:'1.5em' }}/> 
+            </Button>
           
           </Card.Body>
         </Card>
