@@ -24,7 +24,9 @@ function CustomNavbar() {
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="ml-auto">
 
-    
+    <Link to="/" className='text-white mr-4 '> <div className={
+                location.pathname === '/' ? 'nav-link active' : 'nav-link'
+              }> HOME </div>  </Link>
     <Link to="/aboutUs" className='text-white mr-4 '> <div className={
                 location.pathname === '/aboutUs' ? 'nav-link active' : 'nav-link'
               }> ABOUT US </div> </Link>
@@ -33,9 +35,11 @@ function CustomNavbar() {
                 location.pathname === '/contactus' ? 'nav-link active' : 'nav-link'
               } > CONTACT US </div> </Link>
 
-    <Link to="/" className='text-white mr-4 '> <div className={
-                location.pathname === '/' ? 'nav-link active' : 'nav-link'
-              }> HOME </div>  </Link>
+
+
+<Link to="/shop" className='text-white mr-4 '> <div className={
+                location.pathname === '/shop' ? 'nav-link active' : 'nav-link'
+              }> SHOP </div>  </Link>
     
     </Nav>
   </Navbar.Collapse>
