@@ -1,5 +1,5 @@
 import React from 'react'
-import { Badge, Nav} from 'react-bootstrap'
+import { Badge, Button, Nav} from 'react-bootstrap'
 import { BsCartFill } from "react-icons/bs"
 
 const NavShop = () => {
@@ -9,7 +9,8 @@ const NavShop = () => {
   
     <Nav.Item>
 
-      <div type='button'><BsCartFill style={{ fontSize:'2.4em', color:'#02B699' }}/><Badge id="badge-number"> 1 </Badge></div>
+      <Button className='btn btn-light rounded-circle'><BsCartFill style={{ fontSize:'2.4em', color:'#02B699' }}/></Button>
+      <Badge className='badge badge-danger rounded-circle' id="badge-number"> 1 </Badge>
     
     </Nav.Item>
   
