@@ -16,7 +16,10 @@ import Shop from './pages/Shop';
 
 
 
+
 function App() {
+  
+
   return (
     <Router>
 
