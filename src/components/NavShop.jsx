@@ -9,7 +9,7 @@ const NavShop = () => {
   
     <Nav.Item>
 
-      <Button className='btn btn-light rounded-circle'><BsCartFill style={{ fontSize:'2.4em', color:'#02B699' }}/></Button>
+      <Button className='btn btn-light rounded-circle'><BsCartFill style={{ fontSize:'2.3em' }}/></Button>
       <Badge className='badge badge-danger rounded-circle' id="badge-number"> 1 </Badge>
     
     </Nav.Item>
