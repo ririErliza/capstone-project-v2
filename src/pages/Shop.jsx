@@ -1,20 +1,12 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Button, Card, Col, Container, Row } from 'react-bootstrap'
+import {MdAddShoppingCart} from "react-icons/md"
 import NavShop from '../components/NavShop'
-import SingleProduct from '../components/SingleProduct'
+
 
 const Shop = () => {
-// const products= [
-//     {id:1, name:'T-shirt', description: 'Variant colors', price:'$15'},
-//     {id:2, name:'Shopping Bag', description: 'Variant colors', price:'$10'},
-//     {id:3, name:'T-shirt', description: 'Variant colors', price:'$15'},
-//     {id:4, name:'Shopping Bag', description: 'Variant colors', price:'$10'},
-//     {id:5, name:'T-shirt', description: 'Variant colors', price:'$15'},
-//     {id:6, name:'Shopping Bag', description: 'Variant colors', price:'$10'},
-//     {id:7, name:'T-shirt', description: 'Variant colors', price:'$15'},
-//     {id:8, name:'Shopping Bag', description: 'Variant colors', price:'$10'},
-// ]
+
 
 const [products, setProducts] = useState([]);
 
@@ -30,6 +22,9 @@ useEffect(() => {
     getProducts();
   }, []);
 
+
+
+
     
   return (
     <section id="shop-wrapper">
@@ -41,8 +36,30 @@ useEffect(() => {
         <h1 className='pt-4 text-center'>Available Merchandise</h1>
             <Row className='justify-content-md-center pt-5'>
                 {products.map((product)=>(
-                <Col xs={6} md={2} className="mb-3" key={product.id}>
-                    <SingleProduct product={product}/>
+                <Col xs={6} md={2} className="mb-3" key={product._id}>
+                    <Card>
+                    <Card.Img variant='top' src={product.img} className='imageProduct' />
+                    <Card.Body>
+                        <Card.Title className="text-truncate" style={{ color: 'black' }}>
+                        {product.title}
+                        
+                        </Card.Title>
+                        <Card.Text>
+                        {product.desc}
+                        </Card.Text>
+                        <Card.Text className='h4'>
+                        ${product.price}
+                        </Card.Text>
+                    
+                    
+                        <Button  className='btn btn-secondary btn-sm float-right'> 
+                            <MdAddShoppingCart style={{ fontSize:'1.5em' }}/> 
+                        </Button>
+            
+                        
+                    
+                    </Card.Body>
+                    </Card>
             </Col>))}
             
                    
