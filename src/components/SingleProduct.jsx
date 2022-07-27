@@ -13,14 +13,14 @@ const SingleProduct = ({product, onAddToCart}) => {
           <Card.Img variant='top' src={product.img} className='imageProduct' />
           <Card.Body>
             <Card.Title className="text-truncate" style={{ color: 'black' }}>
-              {product.name}
+              {product.title}
              
             </Card.Title>
             <Card.Text>
-            {product.description}
+            {product.desc}
             </Card.Text>
-            <Card.Text className='h5'>
-            {product.price}
+            <Card.Text className='h4'>
+            ${product.price}
             </Card.Text>
           
             <Button onClick={onAddToCart} className='btn btn-secondary btn-sm float-right'> 
