@@ -5,7 +5,6 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 import { FiMapPin } from "react-icons/fi";
 import { Link } from 'react-router-dom';
-import ScrollToTop from "react-scroll-to-top";
 
 const Footer = () => {
   return (
@@ -31,7 +30,7 @@ const Footer = () => {
                 © 2022 REVIVER ORG
               </ul>
               
-              <ScrollToTop smooth/>
+    
           </Col>
           <Col xs={12} md={4}>
             <ul className='ul-footer'>
