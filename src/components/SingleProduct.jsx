@@ -1,10 +1,23 @@
 import React from 'react'
 import { Button, Card } from 'react-bootstrap'
 import {MdAddShoppingCart} from "react-icons/md"
+import { useDispatch } from "react-redux";
+import { addProduct } from "../redux/cartRedux";
 
 
 
-const SingleProduct = ({product, onAddToCart}) => {
+const SingleProduct = ({product}) => {
+
+
+ 
+
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(
+      addProduct({ ...product})
+    );
+  };
     
     
   return (
@@ -23,9 +36,15 @@ const SingleProduct = ({product, onAddToCart}) => {
             ${product.price}
             </Card.Text>
           
-            <Button onClick={onAddToCart} className='btn btn-secondary btn-sm float-right'> 
+          <div id="card-product">
+
+          
+        
+          <Button onClick={handleClick} className='btn btn-secondary btn-sm float-right'> 
                 <MdAddShoppingCart style={{ fontSize:'1.5em' }}/> 
             </Button>
+          </div>
+            
           
           </Card.Body>
         </Card>

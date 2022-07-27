@@ -42,7 +42,7 @@ useEffect(() => {
             <Row className='justify-content-md-center pt-5'>
                 {products.map((product)=>(
                 <Col xs={6} md={2} className="mb-3" key={product.id}>
-            <SingleProduct product={product}/>
+                    <SingleProduct product={product}/>
             </Col>))}
             
                    
