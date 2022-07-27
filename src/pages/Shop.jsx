@@ -1,8 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Container, Row } from 'react-bootstrap'
-import {MdAddShoppingCart} from "react-icons/md"
 import NavShop from '../components/NavShop'
+import { MdAddShoppingCart } from "react-icons/md";
 
 
 const Shop = () => {
