@@ -4,12 +4,11 @@ import hero from '../img/hero.png';
 import leaf from '../img/leaf.png';
 import three from '../img/Reduce.svg';
 import Typed from 'react-typed';
-import { useHistory } from 'react-router-dom';
-
+import {useNavigate } from 'react-router-dom'
 
 
 const Header = () => {
-    const history = useHistory()
+    const navigate = useNavigate()
   return (
 
     <section id="header-wrapper">
@@ -34,8 +33,8 @@ const Header = () => {
                                     
                             </div>
                         
-                            <Button onClick={() => history.push('/volunteerForm')} size="lg" id="button-volunteer"className="mr-5 mt-5  mb-1 mb-sm-0">Volunteer</Button>
-                            <Button onClick={() => history.push('/donationForm')} size="lg" id="button-donate" className="mt-5 mb-1 mb-sm-0">Donate</Button>
+                            <Button onClick={() => navigate('/volunteerForm')} size="lg" id="button-volunteer"className="mr-5 mt-5  mb-1 mb-sm-0">Volunteer</Button>
+                            <Button onClick={() => navigate('/donationForm')} size="lg" id="button-donate" className="mt-5 mb-1 mb-sm-0">Donate</Button>
                         
                     
                     

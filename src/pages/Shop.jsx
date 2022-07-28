@@ -5,18 +5,19 @@ import { MdAddShoppingCart } from "react-icons/md";
 import { useDispatch } from 'react-redux';
 import { useGetAllProductsQuery } from "../Redux/productsAPI";
 import { addToCart } from "../Redux/cartSlice";
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const Shop = () => {
   const { data, error, isLoading } = useGetAllProductsQuery();
+  
 
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
-    history.push("/cart");
+    navigate("/cart");
   };
 
     
