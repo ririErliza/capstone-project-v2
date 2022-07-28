@@ -45,7 +45,7 @@ function CustomNavbar() {
 <Link to="/cart" className='text-white mr-4 '> <div className={
                 location.pathname === '/cart' ? 'nav-link active' : 'nav-link'
               }> <FaShoppingBasket style={{ fontSize:'1.6em', color:'#ffff' }}/>
-              <Badge className='badge badge-danger' id="badge-number"> 1 </Badge> </div>  </Link>
+              <Badge className='badge badge-danger rounded-circle' id="badge-number"> 1 </Badge> </div>  </Link>
     
     </Nav>
   </Navbar.Collapse>
