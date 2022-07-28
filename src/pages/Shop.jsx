@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Container, Row } from 'react-bootstrap'
-import NavShop from '../components/NavShop'
 import { MdAddShoppingCart } from "react-icons/md";
 
 
@@ -32,7 +31,6 @@ useEffect(() => {
 
   
         <Container fluid className=" text-green px-5 py-5">
-        <NavShop/>
         <h1 className='pt-4 text-center'>Available Merchandise</h1>
             <Row className='justify-content-md-center pt-5'>
                 {products.map((product)=>(

@@ -1,7 +1,8 @@
 import React from 'react';
-import {Navbar, Nav } from 'react-bootstrap';
+import {Navbar, Nav, Badge } from 'react-bootstrap';
 import logo from '../img/logo.png';
 import { Link, useLocation } from 'react-router-dom'
+import { FaShoppingBasket } from "react-icons/fa"
 
 
 function CustomNavbar() {
@@ -40,6 +41,11 @@ function CustomNavbar() {
 <Link to="/shop" className='text-white mr-4 '> <div className={
                 location.pathname === '/shop' ? 'nav-link active' : 'nav-link'
               }> SHOP </div>  </Link>
+
+<Link to="/cart" className='text-white mr-4 '> <div className={
+                location.pathname === '/cart' ? 'nav-link active' : 'nav-link'
+              }> <FaShoppingBasket style={{ fontSize:'1.5em', color:'#ffff' }}/>
+              <Badge className='badge badge-danger' id="badge-number"> 1 </Badge> </div>  </Link>
     
     </Nav>
   </Navbar.Collapse>
