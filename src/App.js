@@ -12,9 +12,9 @@ import ContactUs from './components/ContactUs';
 import AddressList from './components/AddressList';
 import Success from './pages/Success';
 import Shop from './pages/Shop';
-import Cart from './pages/Cart';
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
+
+
 
 
 
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <Router>
-        <ToastContainer />
+       
         <CustomNavbar />
 
       
@@ -38,7 +38,6 @@ function App() {
           <Route path="/contactus" element={<ContactUs />}   />
           <Route path="/addresslist" element={<AddressList />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/cart" element={<Cart />} />
           <Route path="/success" element={<Success />} />
           <Route path="*" element={<NotFound />}  />
       </Routes>

@@ -1,12 +1,26 @@
 
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { Card, Col, Container, Row } from 'react-bootstrap'
+import Cart from '../components/Cart';
 //import { MdAddShoppingCart } from "react-icons/md";
 
 
 
 const Shop = () => {
+  const [products, setProducts] = useState([]);
 
+  useEffect(() => {
+      const getProducts = async () => {
+        try {
+          const res = await axios.get(
+            "http://localhost:5000/products"
+          );
+          setProducts(res.data);
+        } catch (err) {}
+      };
+      getProducts();
+    }, []);
 
 
     
@@ -19,8 +33,10 @@ const Shop = () => {
         <h1 className='pt-4 text-center'>Available Merchandise</h1>
       
           <Row className='justify-content-md-center pt-5'>
-                {data.map((product)=>(
-                <Col xs={6} md={2} className="mb-3" key={product._id}>
+            <Col md={7}>
+              <Row>
+            {products.map((product)=>(
+                <Col xs={6} md={3} className="mb-3" key={product._id}>
                     <Card>
                     <Card.Img variant='top' src={product.img} className='imageProduct' />
                     <Card.Body>
@@ -45,6 +61,14 @@ const Shop = () => {
                     </Card.Body>
                     </Card>
             </Col>))}
+            </Row>
+          </Col>
+          <Col md={5}>
+            <Row>
+            <Cart/>
+            </Row>
+          </Col>
+                
             
                    
                 
