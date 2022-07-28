@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import {Navbar, Nav, Badge } from 'react-bootstrap';
+import {Navbar, Nav } from 'react-bootstrap';
 import logo from '../img/logo.png';
 import { Link, useLocation } from 'react-router-dom'
-import { FaShoppingBasket } from "react-icons/fa"
-// import { useSelector } from "react-redux";
+
 
 
 function CustomNavbar() {
-  // const { cartTotalQuantity } = useSelector((state) => state.cart);
+  
   const location = useLocation()
   const [expanded, setExpanded] = useState(false);
   return (
@@ -49,11 +48,7 @@ function CustomNavbar() {
                 location.pathname === '/shop' ? 'nav-link active' : 'nav-link'
               }> SHOP </div>  </Link>
 
-    <Link onClick={() => setExpanded(false)}
-             to="/cart" className='text-white mr-4 '> <div className={
-                location.pathname === '/cart' ? 'nav-link active' : 'nav-link'
-              }> <FaShoppingBasket style={{ fontSize:'1.6em', color:'#ffff' }}/>
-              <Badge className='badge badge-danger rounded-circle' id="badge-number"> 0 </Badge> </div>  </Link>
+    
     
     </Nav>
   </Navbar.Collapse>
