@@ -3,9 +3,9 @@ import React from 'react'
 import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 import { MdAddShoppingCart } from "react-icons/md";
 import { useDispatch } from 'react-redux';
-import { useHistory } from "react-router-dom";
 import { useGetAllProductsQuery } from "../Redux/productsAPI";
 import { addToCart } from "../Redux/cartSlice";
+import { useHistory } from 'react-router-dom';
 
 
 const Shop = () => {
