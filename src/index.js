@@ -7,8 +7,10 @@ import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 
 import { productsApi } from "./Redux/productsAPI";
+import cartReducer from "./Redux/cartSlice"
 
 const store = configureStore({
+  cart:cartReducer,
   reducer: {
     [productsApi.reducerPath]: productsApi.reducer,
   },
