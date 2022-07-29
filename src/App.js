@@ -15,12 +15,6 @@ import Shop from './pages/Shop';
 
 
 
-
-
-
-
-
-
 function App() {
   
 
@@ -37,7 +31,9 @@ function App() {
           <Route path="/volunteerForm" element={<VolunteerForm />}   />
           <Route path="/contactus" element={<ContactUs />}   />
           <Route path="/addresslist" element={<AddressList />} />
+         
           <Route path="/shop" element={<Shop />} />
+         
           <Route path="/success" element={<Success />} />
           <Route path="*" element={<NotFound />}  />
       </Routes>
