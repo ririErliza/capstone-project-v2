@@ -35,7 +35,7 @@ const ShopComponent = () => {
         <h1 className='pt-4 text-center'>Available Merchandise</h1>
       
           <Row className='justify-content-md-center pt-5'>
-            <Col md={7}>
+            <Col sm={12} md={7}>
               <Row>
             {products.map((item)=>{
             return (
@@ -52,7 +52,7 @@ const ShopComponent = () => {
         })}
             </Row>
           </Col>
-          <Col md={5}>
+          <Col sm={12} md={5}>
             <Row>
                 <Card>
                 <Card.Body>
