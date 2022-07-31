@@ -35,9 +35,9 @@ const PayButton = ({ cartItems }) => {
       <>
         <Button className="btn btn-success" onClick={() => handleCheckout()}>
         
-        Pay
+        Checkout
         {isSubmitting && (
-                  <span className="spinner-border spinner-border-sm mr-3"></span>
+                  <span className="spinner-border spinner-border-sm ml-3"></span>
         )} </Button>
       </>
     );

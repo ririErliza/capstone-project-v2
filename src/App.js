@@ -14,8 +14,9 @@ import Success from './pages/Success';
 import Shop from './pages/Shop';
 import SuccessPayment from './pages/SuccessPayment';
 import Cancel from './pages/Cancel';
-import Orders from './pages/Orders';
-import PaymentSummary from './pages/PaymentSummary';
+import LoginForm from './pages/LoginForm';
+import SignupForm from './pages/SignupForm';
+
 
 
 
@@ -39,8 +40,10 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/checkout-success" element={<SuccessPayment />} />
           <Route path="/checkout-cancelled" element={<Cancel />} />
-          <Route path="/orders" element={<Orders />} />
-          <Route path="/paymentsummary" element={<PaymentSummary />} />
+
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/signup" element={<SignupForm />} />
+
          
           <Route path="/success" element={<Success />} />
           <Route path="*" element={<NotFound />}  />

@@ -3,11 +3,13 @@ import { Button } from "react-bootstrap";
 import { useCart } from "react-use-cart";
 import { MdDeleteForever } from "react-icons/md";
 import shoppingCart from '../img/shopping-cart.png';
-//import {useNavigate } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 import PayButton from "./PayButton";
 
 const Cart = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
+
+  const user = localStorage.getItem("token")
 
   const {
     isEmpty,
@@ -26,7 +28,7 @@ const Cart = () => {
   height="auto"
   className="d-inline-block align-top ml-3"
   alt="reviver logo"
-/> <h4 className="text-center"> Cart is empty</h4></>
+/> <h4 className="text-center text-secondary"> Cart is empty</h4></>
   return (
     <section className="py-4 container">
       <div className="row justify-content-center">
@@ -112,7 +114,13 @@ const Cart = () => {
             Clear Cart
           </button>
           {/* <Button onClick={() => navigate('/orders')}>Checkout</Button> */}
+          {user?(
           <PayButton cartItems={items}/>
+          ) : (
+          <button className="btn btn-success m-2" onClick={() => navigate("/login")}>
+            Login to checkout
+          </button>
+            )}
         </div>
         </div>
         

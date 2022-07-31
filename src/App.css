@@ -98,7 +98,12 @@ body{
   
 }
 
-
+#button-logout{
+  border-radius: 40px;
+  background-color: #02B699;
+  color:#ffff;
+  border: none;
+}
 
 /********************** HEADER ********************************************/
 #header-wrapper{
@@ -540,5 +545,36 @@ p.second-title{
 
 
 
+/********************** LOGIN FORM ********************************************/
 
+.login-wrapper{
+  padding-top: 60px;
+}
 
+#button-signup{
+  border-radius: 40px;
+  width: 150px;
+  background-color: #D9E8E3;
+  color:#015441;
+  border: none;
+
+}
+
+.form-box-login{
+  color:#02504d;
+  width: 700px;
+  height: 450px;
+  background-image:#F8FDF4;
+  border-radius: 8px;
+  box-shadow:0px 4px 20px 3px  #c2b9a6;
+}
+
+/********************** SIGNUP FORM ********************************************/
+.form-box-signup{
+  color:#02504d;
+  width: 700px;
+  height: 550px;
+  background-image:#F8FDF4;
+  border-radius: 8px;
+  box-shadow:0px 4px 20px 3px  #c2b9a6;
+}
