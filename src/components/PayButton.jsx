@@ -1,11 +1,18 @@
 import axios from "axios";
+import { useState } from "react";
 import { Button } from "react-bootstrap";
+import { useCart } from "react-use-cart";
 
 const PayButton = ({ cartItems }) => {
+  const {
+    emptyCart
+  } = useCart();
+
+  const [isSubmitting, setSubmitting] = useState(false)
    const url= "http://localhost:5000"
   
     const handleCheckout = () => {
-
+      setSubmitting(true)
         console.log(cartItems)
 
         axios
@@ -16,14 +23,22 @@ const PayButton = ({ cartItems }) => {
             if (response.data.url) {
             window.location.href = response.data.url;
             }
+            emptyCart()
         })
         .catch((err) => console.log(err.message));
+
+        
      
     };
   
     return (
       <>
-        <Button className="btn btn-success" onClick={() => handleCheckout()}>Check out</Button>
+        <Button className="btn btn-success" onClick={() => handleCheckout()}>
+        
+        Pay
+        {isSubmitting && (
+                  <span className="spinner-border spinner-border-sm mr-3"></span>
+        )} </Button>
       </>
     );
   };

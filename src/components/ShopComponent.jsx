@@ -32,7 +32,7 @@ const ShopComponent = () => {
 
   
         <Container fluid className=" text-green px-5 py-5">
-        <h1 className='pt-4 text-center'>Available Merchandise</h1>
+        <h1 className='pt-4 text-center'>Reviver's Merchandise</h1>
       
           <Row className='justify-content-md-center pt-5'>
             <Col sm={12} md={7}>

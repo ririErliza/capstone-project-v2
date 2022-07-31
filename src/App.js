@@ -12,6 +12,10 @@ import ContactUs from './components/ContactUs';
 import AddressList from './components/AddressList';
 import Success from './pages/Success';
 import Shop from './pages/Shop';
+import SuccessPayment from './pages/SuccessPayment';
+import Cancel from './pages/Cancel';
+import Orders from './pages/Orders';
+import PaymentSummary from './pages/PaymentSummary';
 
 
 
@@ -33,6 +37,10 @@ function App() {
           <Route path="/addresslist" element={<AddressList />} />
          
           <Route path="/shop" element={<Shop />} />
+          <Route path="/checkout-success" element={<SuccessPayment />} />
+          <Route path="/checkout-cancelled" element={<Cancel />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/paymentsummary" element={<PaymentSummary />} />
          
           <Route path="/success" element={<Success />} />
           <Route path="*" element={<NotFound />}  />

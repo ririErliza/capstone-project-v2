@@ -1,10 +1,14 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useCart } from "react-use-cart";
-import PayButton from "./PayButton";
 import { MdDeleteForever } from "react-icons/md";
+import shoppingCart from '../img/shopping-cart.png';
+//import {useNavigate } from 'react-router-dom'
+import PayButton from "./PayButton";
 
 const Cart = () => {
+  // const navigate = useNavigate();
+
   const {
     isEmpty,
     totalUniqueItems,
@@ -16,7 +20,13 @@ const Cart = () => {
     emptyCart
   } = useCart();
 
-  if (isEmpty) return <h1 className="text-center">Cart is Empty</h1>;
+  if (isEmpty) return <><img
+  src={shoppingCart}
+  width="630"
+  height="auto"
+  className="d-inline-block align-top ml-3"
+  alt="reviver logo"
+/> <h4 className="text-center"> Cart is empty</h4></>
   return (
     <section className="py-4 container">
       <div className="row justify-content-center">
@@ -101,6 +111,7 @@ const Cart = () => {
           <button className="btn btn-danger m-2" onClick={() => emptyCart()}>
             Clear Cart
           </button>
+          {/* <Button onClick={() => navigate('/orders')}>Checkout</Button> */}
           <PayButton cartItems={items}/>
         </div>
         </div>
