@@ -9,7 +9,7 @@ const PayButton = ({ cartItems }) => {
   } = useCart();
 
   const [isSubmitting, setSubmitting] = useState(false)
-   const url= "http://localhost:5000"
+   const url= "https://backend-reviver.herokuapp.com"
   
     const handleCheckout = () => {
       setSubmitting(true)

@@ -16,7 +16,7 @@ const ShopComponent = () => {
       const getProducts = async () => {
         try {
           const res = await axios.get(
-            "http://localhost:5000/products"
+            "https://backend-reviver.herokuapp.com/products"
           );
           setProducts(res.data);
         } catch (err) {}
@@ -30,7 +30,6 @@ const ShopComponent = () => {
     <section id="shop-wrapper">
         
 
-  
         <Container fluid className=" text-green px-5 py-5">
         <h1 className='pt-4 text-center'>Reviver's Merchandise</h1>
       

@@ -23,7 +23,7 @@ const SignupForm = () => {
      
       e.preventDefault();
       axios
-      .post("http://localhost:5000/users/register",{
+      .post("https://backend-reviver.herokuapp.com/users/register",{
         name:Signup.name,
         surname:Signup.surname,
         email:Signup.email,
